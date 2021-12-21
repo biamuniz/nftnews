@@ -10,7 +10,7 @@ from GoogleNews import GoogleNews
 
 app = Flask(__name__)
 
-spreadsheet_id = os.environ["GOOGLE_SHEET_ID"]
+spreadsheet_id = os.environ["SPREADSHEET_ID"]
 conteudo_codificado = os.environ["GOOGLE_SHEETS_CREDENTIALS"]
 conteudo = base64.b64decode(conteudo_codificado)
 credentials = json.loads(conteudo)
