@@ -29,10 +29,6 @@ def sobre():
     return arquivo.read()
 
 @app.route("/nftnews")
-def NFTnews():
-    arquivo = open("templates/nftnews.html")
-    return arquivo.read()
-
 def nftnews():
     googlenews=GoogleNews(period='d')
     googlenews.setlang('pt')
@@ -41,4 +37,6 @@ def nftnews():
     df=pd.DataFrame(result)
     del df['datetime']
     worksheet.update([df.columns.values.tolist()] + df.values.tolist())
+    arquivo = open("templates/nftnews.html")
+    return arquivo.read()
     return worksheet
