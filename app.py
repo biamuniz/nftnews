@@ -23,7 +23,14 @@ def hello_world():
     arquivo = open("templates/home.html")
     return arquivo.read()
 
-@app.route("/sobre")
-def sobre():
-    arquivo = open("templates/sobre.html")
-    return arquivo.read()
+@app.route("/nftnews")
+def nftnews():
+    googlenews=GoogleNews(period='d')
+    googlenews.setlang('pt')
+    googlenews.search('NFT')
+    result=googlenews.result()
+    df=pd.DataFrame(result)
+    del df['datetime']
+    worksheet.update([df.columns.values.tolist()] + df.values.tolist())
+    arquivo = open("templates/nftnews.html")
+    return arquivo.read(), worksheet
