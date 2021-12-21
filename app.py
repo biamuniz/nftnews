@@ -2,7 +2,8 @@ import csv
 import io
 import requests
 from flask import Flask
-import snscrape.modules.twitter as sntwitter
+import pandas as pd
+from GoogleNews import GoogleNews
 import pandas as pd
 
 app = Flask(__name__)
@@ -24,8 +25,6 @@ def tweetify():
 
 
 def nftnews():
-    from GoogleNews import GoogleNews
-    import pandas as pd
     googlenews=GoogleNews(period='d')
     googlenews.setlang('pt')
     googlenews.search('NFT')
