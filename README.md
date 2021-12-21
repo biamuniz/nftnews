@@ -10,6 +10,5 @@ O site **foi feito** para rodar no [Heroku](https://www.heroku.com/) e depende d
 
 
 ## To-Do
-Ainda não é a versão final do site, ainda falta implementar algumas melhorias:
-- [ ] Automatizar a atualização da planilha;
-- [ ] Automatizar a atualização da visualização (a visualização atualiza, mas para ficar funcional, precisa finalizar a etapa anterior)
+Ainda não é a versão final do site, falta implementar algumas melhorias:
+- [ ] Atualização da planilha a cada X horas.
