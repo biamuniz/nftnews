@@ -41,4 +41,4 @@ def nftnews():
     df=pd.DataFrame(result)
     del df['datetime']
     worksheet.update([df.columns.values.tolist()] + df.values.tolist())
-    return df
+    return worksheet
