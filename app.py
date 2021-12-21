@@ -22,3 +22,14 @@ worksheet = spreadsheet.worksheet("Página1")
 def hello_world():
     arquivo = open("templates/home.html")
     return arquivo.read()
+
+@app.route("/nftnews")	
+def nftnews():	
+    googlenews=GoogleNews(period='d')	
+    googlenews.setlang('pt')	
+    googlenews.search('NFT')	
+    result=googlenews.result()	
+    df=pd.DataFrame(result)	
+    del df['datetime']	
+    worksheet.update([df.columns.values.tolist()] + df.values.tolist())
+    return render_template open("templates/nftnews.html")
