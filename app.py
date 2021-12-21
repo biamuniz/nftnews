@@ -38,5 +38,4 @@ def nftnews():
     del df['datetime']
     worksheet.update([df.columns.values.tolist()] + df.values.tolist())
     arquivo = open("templates/nftnews.html")
-    return arquivo.read()
-    return worksheet
+    return arquivo.read(), worksheet
