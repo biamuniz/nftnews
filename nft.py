@@ -3,6 +3,7 @@ import json
 import os
 import pandas as pd
 import requests
+import gspread
 from GoogleNews import GoogleNews
 
 
