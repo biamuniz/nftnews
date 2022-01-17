@@ -1,8 +1,10 @@
+import base64
 import json
 import os
 import pandas as pd
 import requests
 from GoogleNews import GoogleNews
+
 
 spreadsheet_id = os.environ["SPREADSHEET_ID"]
 conteudo_codificado = os.environ["GOOGLE_SHEETS_CREDENTIALS"]
